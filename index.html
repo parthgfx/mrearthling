@@ -14,14 +14,16 @@
 <meta property="og:url" content="https://mrearthling.com/">
 <meta property="og:title" content="Mr. Earthling | Vegan fermented kimchi in Bengaluru">
 <meta property="og:description" content="Bold, crunchy, vegan, naturally fermented kimchi with live probiotics. ₹330 per jar, delivered in Bengaluru. Order on WhatsApp.">
-<meta property="og:image" content="https://mrearthling.com/assets/og-image.jpg">
+<meta property="og:image" content="https://mrearthling.com/assets/og-image.jpg?v=2">
+<meta property="og:image:secure_url" content="https://mrearthling.com/assets/og-image.jpg?v=2">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A jar of Mr. Earthling kimchi bursting open on a pink background">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mr. Earthling | Vegan fermented kimchi in Bengaluru">
 <meta name="twitter:description" content="Bold, crunchy, vegan, naturally fermented kimchi with live probiotics. Order on WhatsApp.">
-<meta name="twitter:image" content="https://mrearthling.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://mrearthling.com/assets/og-image.jpg?v=2">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -194,7 +196,7 @@
      "name": "Any allergens I should know about?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It contains soy, from the soy sauce. Everything else is in the ingredient list above, nothing hidden."
+      "text": "It contains soy and wheat (gluten). Soy sauce is usually brewed with wheat and most gochujang contains wheat too, so it isn't suitable for a gluten-free diet. Everything else is in the ingredient list above, nothing hidden."
      }
     },
     {
@@ -384,6 +386,7 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
 .nutri th,.nutri td{text-align:left;padding:.38em .2em;border-bottom:1px solid rgba(20,20,20,.18)}
 .nutri td:not(:first-child),.nutri th:not(:first-child){text-align:right}
 .nutri tr:last-child td{border-bottom:0}
+.nutri__note{font-size:.78rem;opacity:.7;margin-top:10px}
 .buy{display:flex;gap:12px;flex-wrap:wrap;align-items:stretch}
 .qty{display:inline-flex;align-items:stretch;border:var(--bw) solid var(--ink);border-radius:999px;overflow:hidden}
 .qty button{width:44px;border:0;background:none;font-size:1.3rem;font-weight:600}
@@ -735,10 +738,22 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
             <button role="tab" aria-selected="false" aria-controls="t3" id="tb3">Keep it happy</button>
           </div>
           <div class="tabs__panel" role="tabpanel" id="t1" aria-labelledby="tb1">
-            Napa cabbage, carrots, radish, gochujang, rice paste, soy sauce, garlic, ginger, salt, pear or apple. <b>Contains:</b> soy.
+            Napa cabbage, carrots, radish, gochujang, rice paste, soy sauce, garlic, ginger, salt, pear or apple. <b>Contains:</b> soy and wheat (gluten).
           </div>
           <div class="tabs__panel" role="tabpanel" id="t2" aria-labelledby="tb2" hidden>
-            <p>Nutrition values for the new recipe are being finalised. The per 100 g table will appear here once the batch has been tested.</p>
+            <table class="nutri">
+              <thead><tr><th>Approx. values</th><th>Per 100 g</th><th>Per 30 g</th></tr></thead>
+              <tbody>
+                <tr><td>Energy (kcal)</td><td>34</td><td>10</td></tr>
+                <tr><td>Protein (g)</td><td>1.6</td><td>0.5</td></tr>
+                <tr><td>Carbohydrate (g)</td><td>7.0</td><td>2.1</td></tr>
+                <tr><td>of which sugars (g)</td><td>2.0</td><td>0.6</td></tr>
+                <tr><td>Dietary fibre (g)</td><td>1.4</td><td>0.4</td></tr>
+                <tr><td>Total fat (g)</td><td>0.3</td><td>0.1</td></tr>
+                <tr><td>Sodium (mg)</td><td>750</td><td>225</td></tr>
+              </tbody>
+            </table>
+            <p class="nutri__note">Estimated from the recipe using standard ingredient data, not lab tested. Values vary a little from batch to batch.</p>
           </div>
           <div class="tabs__panel" role="tabpanel" id="t3" aria-labelledby="tb3" hidden>
             Keep refrigerated (0 to 5°C). Always use a clean, dry spoon (double-dipping upsets the colony). Consume within 4 weeks after opening.
@@ -848,7 +863,7 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
         <details name="faq" class="acc"><summary>How do I keep it happy?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
           <div>Keep it refrigerated (0 to 5°C), always use a clean, dry spoon, and finish it within 4 weeks of opening. Honestly, it won't last that long.</div></details>
         <details name="faq" class="acc"><summary>Any allergens I should know about?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
-          <div>It contains soy, from the soy sauce. Everything else is in the ingredient list above, nothing hidden.</div></details>
+          <div>It contains soy and wheat (gluten). Soy sauce is usually brewed with wheat and most gochujang contains wheat too, so it isn't suitable for a gluten-free diet. Everything else is in the ingredient list above, nothing hidden.</div></details>
         <details name="faq" class="acc"><summary>What do I eat it with?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
           <div>Straight from the jar, with rice, noodles or as a side. Toss it into stir fries, fried rice or sandwiches. Stuff it into rolls, bowls or salads for a flavour boost.</div></details>
         <details name="faq" class="acc"><summary>Is kimchi good for your gut?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
