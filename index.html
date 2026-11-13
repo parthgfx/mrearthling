@@ -369,7 +369,11 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
 .pcard--live .btn--main{font-size:1.2rem;min-height:56px;padding:0 1.2em .24em}
 .pcard--live .btn--ghost{min-height:56px;padding:0 1.2em;justify-content:center}
 .pcard--soon .btn{width:100%;justify-content:center;margin-top:14px}
-@media (max-width:1024px){.cat{grid-template-columns:repeat(2,1fr)}.pcard--live{grid-row:auto}.pcard--live .pcard__art{min-height:220px}}
+.cat--solo .pcard--soon{display:none}
+.cat--solo{grid-template-columns:minmax(0,600px);justify-content:center}
+.cat--solo .pcard--live{grid-column:auto;grid-row:auto}
+.cat--solo .pcard--live .pcard__art{min-height:300px}
+@media (max-width:1024px){.cat{grid-template-columns:repeat(2,1fr)}.cat--solo{grid-template-columns:minmax(0,600px)}.pcard--live{grid-row:auto}.pcard--live .pcard__art{min-height:220px}}
 @media (max-width:600px){.pcard--live .pcard__art img{width:min(58%,220px)}.pcard--live .pcard__cta{flex-wrap:nowrap}.pcard--live .btn--main{font-size:1rem;min-height:50px;padding:0 1em .24em}.pcard--live .btn--ghost{font-size:.85rem;min-height:50px;padding:0 1em}.cat{gap:12px}.pcard{padding:12px;border-radius:20px}.pcard h3{font-size:1.1rem}.pcard p{font-size:.82rem}.pcard--live{padding:18px}.pcard--live h3{font-size:1.6rem}.pcard--live p{font-size:.95rem}.pcard--soon .btn{font-size:.8rem;padding:.7em .8em}.pcard__badge{font-size:.62rem}}
 
 .prod{background:var(--sun);overflow:hidden}
@@ -405,17 +409,14 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
 /* ---------- why ---------- */
 .why__head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
 .why__head p{max-width:36ch;font-size:1.05rem}
-.values{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:48px}
-.value{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--white);font-weight:600;font-size:1rem}
-.value .ico{width:22px;height:22px;color:var(--pink)}
-.climate{margin-top:36px;padding-top:30px;border-top:var(--bw) dashed rgba(20,20,20,.3)}
+.climate{margin-top:44px;padding-top:34px;border-top:var(--bw) dashed rgba(20,20,20,.3)}
 .climate h3{font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:24px}
 .climate ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .climate li{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:var(--bw) solid var(--ink);border-radius:22px;padding:18px 18px 20px}
 .climate li svg{width:34px;height:34px;flex:none;color:var(--pink)}
 .climate li b{display:block;font-family:var(--display);font-weight:400;font-size:1.15rem;text-transform:uppercase;margin-bottom:4px}
 .climate li p{font-size:.92rem;line-height:1.5}
-@media (max-width:860px){.climate ul{grid-template-columns:1fr}}
+@media (max-width:860px){.climate ul{grid-template-columns:1fr;gap:12px}.climate li{padding:14px 16px}.climate h3{margin-bottom:18px}}
 .pcard__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .pcard__tags span{font-size:.72rem;font-weight:600;padding:.25em .7em;border-radius:999px;background:var(--white);border:1.5px solid var(--ink)}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
@@ -683,17 +684,16 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
   <section class="sec shop" id="products">
     <div class="wrap">
       <div class="shop__head rv">
-        <span class="eyebrow">The pantry</span>
-        <h2>One jar live. More on the way.</h2>
-        <p>Kimchi is ready to order today. The rest of the colony is still growing, drying and fermenting.</p>
+        <span class="eyebrow">Fresh from the lab</span>
+        <h2>The pantry.</h2>
+        <p>Naturally fermented kimchi, ready to order today.</p>
       </div>
-      <div class="cat">
+      <div class="cat cat--solo"><!-- coming-soon cards are hidden for now: delete the class "cat--solo" on this div to show them again -->
         <article class="pcard pcard--live rv">
           <span class="pcard__badge">Available now</span>
           <div class="pcard__art"><img src="assets/img/jar.webp" alt="Mr. Earthling kimchi, 250 g jar" width="691" height="800" loading="lazy"></div>
           <h3>Kimchi</h3>
           <p>Naturally fermented kimchi, made the Indian way. 250 g of live cultures and real veggies.</p>
-          <div class="pcard__tags"><span>Vegan</span><span>Cruelty free</span><span>Climate conscious</span></div>
           <p class="price"><s>₹500</s><b>₹330</b><span>per 250 g jar</span><em>Launch price</em></p>
           <p class="ship">Delivery in Bengaluru, dispatched the next day. Delivery charges extra.</p>
           <div class="pcard__cta">
@@ -819,15 +819,10 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
           <p>Napa cabbage, carrots, radish, garlic and ginger, with a little pear or apple for sweetness. Very much from this planet.</p>
         </article>
       </div>
-      <div class="values rv" aria-label="What Mr. Earthling stands for">
-        <span class="value"><svg class="ico"><use href="#i-leaf"/></svg>100% vegan</span>
-        <span class="value"><svg class="ico"><use href="#i-heart2"/></svg>Cruelty free</span>
-        <span class="value"><svg class="ico"><use href="#i-globe"/></svg>Climate conscious</span>
-      </div>
       <div class="climate rv">
-        <h3>Climate conscious, in plain words</h3>
+        <h3>100% vegan. Cruelty free. Climate conscious.</h3>
         <ul>
-          <li><svg class="ico" fill="none"><use href="#i-leaf"/></svg><div><b>Vegan by design</b><p>Plant-based food generally needs far less water, land and resources than meat. Ours is 100% vegan.</p></div></li>
+          <li><svg class="ico" fill="none"><use href="#i-leaf"/></svg><div><b>Vegan and cruelty free</b><p>Nothing from an animal goes into our jars. Plant-based food also generally needs far less water, land and resources than meat.</p></div></li>
           <li><svg class="ico" fill="none"><use href="#i-globe"/></svg><div><b>Plastic-free packaging</b><p>Packed without plastic, so there's less of it hanging around the planet.</p></div></li>
           <li><svg class="ico" fill="none"><use href="#i-leaf"/></svg><div><b>Fresh, never cold-stored</b><p>Every batch is made with fresh ingredients, not ones that sat in cold storage first.</p></div></li>
         </ul>
