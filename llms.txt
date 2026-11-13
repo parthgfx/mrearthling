@@ -1,9 +1,9 @@
 # Mr. Earthling
 
-> Mr. Earthling sells naturally fermented kimchi made the Indian way. Orders are taken on WhatsApp only, through https://mrearthling.com.
+> Mr. Earthling sells Korean-style, naturally fermented vegan kimchi made the Indian way. Orders are taken on WhatsApp only, through https://mrearthling.com.
 
 ## Products
-- Kimchi, 250 g jar (available now), ₹330 launch price (usually ₹500), delivered in Bengaluru, dispatched the next day, delivery charged at actual cost via Porter or Swiggy Genie. Vegan, cruelty free and climate conscious (plant-based, plastic-free packaging, made with fresh ingredients rather than cold-stored ones). Naturally fermented, live probiotic cultures, no artificial preservatives. Ingredients: napa cabbage, carrots, radish, gochujang, rice paste, soy sauce, garlic, ginger, salt, pear or apple. Contains soy and wheat (gluten).
+- Korean-style kimchi, 250 g jar (available now), ₹330 launch price (usually ₹500), delivered in Bengaluru, dispatched the next day, delivery charged at actual cost via Porter or Swiggy Genie. Vegan, cruelty free and climate conscious (plant-based, plastic-free packaging, made with fresh ingredients rather than cold-stored ones). Naturally fermented, live probiotic cultures, no artificial preservatives. Ingredients: napa cabbage, carrots, radish, gochujang, rice paste, soy sauce, garlic, ginger, salt, pear or apple. Contains soy and wheat (gluten).
 - Lavender rice, microgreens, dehydrated mushrooms and dehydrated chillies (coming soon, not yet available).
 
 ## Story
@@ -13,5 +13,6 @@
 - Tap "Get the Jar" on https://mrearthling.com. It opens a WhatsApp chat with the order message filled in. There is no checkout on the website.
 
 ## Contact
+- Email: hello@mrearthling.com
 - WhatsApp: +91 78388 43233
 - Instagram: https://instagram.com/mrearthlingco
