@@ -2,7 +2,7 @@
    Pages: network first (always fresh), falling back to the saved copy offline.
    Images, icons and fonts: served from cache, refreshed in the background.
    Videos are never cached (large, and the page works without them). */
-const CACHE = 'me-v2';
+const CACHE = 'me-v3';
 const CORE = ['/', '/index.html', '/manifest.webmanifest', '/assets/icon-192.png', '/assets/icon-512.png',
   '/assets/favicon.svg', '/assets/img/hero.webp', '/assets/img/jar.webp', '/assets/img/creature.webp', '/assets/img/firstbite-still.webp'];
 
