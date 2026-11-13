@@ -177,6 +177,14 @@
     },
     {
      "@type": "Question",
+     "name": "Why do you call it climate conscious?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Three reasons. It is 100% vegan, and plant-based food generally uses far less water, land and resources than meat. It comes in plastic-free packaging. And every batch is made with fresh ingredients, not cold-stored ones."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Why is the jar fizzy when I open it?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -400,6 +408,14 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
 .values{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:48px}
 .value{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--white);font-weight:600;font-size:1rem}
 .value .ico{width:22px;height:22px;color:var(--pink)}
+.climate{margin-top:36px;padding-top:30px;border-top:var(--bw) dashed rgba(20,20,20,.3)}
+.climate h3{font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:24px}
+.climate ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.climate li{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:var(--bw) solid var(--ink);border-radius:22px;padding:18px 18px 20px}
+.climate li svg{width:34px;height:34px;flex:none;color:var(--pink)}
+.climate li b{display:block;font-family:var(--display);font-weight:400;font-size:1.15rem;text-transform:uppercase;margin-bottom:4px}
+.climate li p{font-size:.92rem;line-height:1.5}
+@media (max-width:860px){.climate ul{grid-template-columns:1fr}}
 .pcard__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .pcard__tags span{font-size:.72rem;font-weight:600;padding:.25em .7em;border-radius:999px;background:var(--white);border:1.5px solid var(--ink)}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
@@ -807,6 +823,14 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
         <span class="value"><svg class="ico"><use href="#i-heart2"/></svg>Cruelty free</span>
         <span class="value"><svg class="ico"><use href="#i-globe"/></svg>Climate conscious</span>
       </div>
+      <div class="climate rv">
+        <h3>Climate conscious, in plain words</h3>
+        <ul>
+          <li><svg class="ico" fill="none"><use href="#i-leaf"/></svg><div><b>Vegan by design</b><p>Plant-based food generally needs far less water, land and resources than meat. Ours is 100% vegan.</p></div></li>
+          <li><svg class="ico" fill="none"><use href="#i-globe"/></svg><div><b>Plastic-free packaging</b><p>Packed without plastic, so there's less of it hanging around the planet.</p></div></li>
+          <li><svg class="ico" fill="none"><use href="#i-leaf"/></svg><div><b>Fresh, never cold-stored</b><p>Every batch is made with fresh ingredients, not ones that sat in cold storage first.</p></div></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -858,6 +882,8 @@ h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
           <div>Napa cabbage, carrots, radish, gochujang, rice paste, soy sauce, garlic, ginger, salt and pear or apple. That's the whole list. No artificial preservatives.</div></details>
         <details name="faq" class="acc"><summary>Is Mr. Earthling kimchi vegan?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
           <div>Yes. It is 100% vegan and cruelty free. No fish sauce, no shrimp paste, nothing from an animal. Just veggies, gochujang, soy sauce, rice paste and patience.</div></details>
+        <details name="faq" class="acc"><summary>Why do you call it climate conscious?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
+          <div>Three reasons. It is 100% vegan, and plant-based food generally uses far less water, land and resources than meat. It comes in plastic-free packaging. And every batch is made with fresh ingredients, not cold-stored ones.</div></details>
         <details name="faq" class="acc"><summary>Why is the jar fizzy when I open it?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
           <div>It's alive! Kimchi is naturally fermented with live cultures, and a little fizz or bubbling is what fermentation does. Open it slowly, over a plate, like a responsible earthling.</div></details>
         <details name="faq" class="acc"><summary>How do I keep it happy?<svg class="ico" viewBox="0 0 40 40"><use href="#i-plus"/></svg></summary>
