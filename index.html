@@ -469,25 +469,18 @@ img.maker__photo{display:block;object-fit:cover;border:4px solid var(--pink)}
 .join h2{font-size:clamp(2.6rem,6.4vw,5rem)}
 .join p{font-size:1.08rem;margin:14px auto 28px;max-width:44ch}
 .join .btn--main{font-size:1.5rem}
+.join__btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.join__btns .ico{width:1.2em;height:1.2em;margin-right:.4em}
+.join__btns .btn--main .ico{margin-right:0}
 .join__note{font-family:var(--scribble);font-size:1.2rem;margin-top:16px}
 
 /* ---------- footer ---------- */
 .ftr{background:var(--ink);color:var(--cream);padding:64px 0 28px}
 .ftr__logo{color:var(--sun);width:100%;margin-bottom:40px}
-@media (max-width:860px),(hover:none){.ftr__sound{display:none!important}}
-.ftr__sound{display:inline-grid;place-items:center;flex:none;width:40px;height:40px;padding:0;border:1.5px solid rgba(255,246,220,.35);border-radius:50%;background:transparent;color:var(--cream);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
-.ftr__sound:hover{border-color:var(--pink);color:var(--pink)}
-.ftr__sound[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--ink)}
-.ftr__sound svg{width:20px;height:20px;display:block}
-.ftr__sound .wv{display:none}
-.ftr__sound[aria-pressed="true"] .wv{display:inline}
-.ftr__sound[aria-pressed="true"] .mu{display:none}
-.ftr__sound.nudge{animation:nudge .6s}
 .ftr__app{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;opacity:.85}
 .ftr__app:hover{opacity:1;color:var(--pink)}
 .ftr__app .ico{width:18px;height:18px}
 .ftr__app[hidden]{display:none}
-@keyframes nudge{20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
 .ftr__logo svg{width:100%;height:auto;overflow:visible}
 /* footer logo: letters drop in one by one, the "ear" underline swipes in, then the letters bob gently; hover a letter to make it hop */
 .ftr__logo .lt{transform-box:fill-box;transform-origin:50% 100%;opacity:0}
@@ -837,11 +830,7 @@ img.maker__photo{display:block;object-fit:cover;border:4px solid var(--pink)}
       </div>
     </div>
     <div class="wrap maker rv">
-      <!-- to show her photo: replace this placeholder div with <img class="maker__photo" src="assets/img/homemaker.webp" alt="..." width="340" height="340"> -->
-      <div class="maker__photo" role="img" aria-label="Photo of the homemaker behind every jar, coming soon">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="38" r="17" fill="none" stroke="currentColor" stroke-width="4"/><path d="M18 90c3-22 17-32 32-32s29 10 32 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
-        <span>Her photo, soon</span>
-      </div>
+      <img class="maker__photo" src="assets/img/homemaker.webp" alt="The homemaker who makes every jar of Mr. Earthling kimchi, smiling in clear glasses against a yellow wall" width="520" height="520" loading="lazy">
       <div class="maker__text">
         <span class="maker__tag">Ear's proudest moment</span>
         <h3>Made by a homemaker starting her very first business.</h3>
@@ -935,7 +924,10 @@ img.maker__photo{display:block;object-fit:cover;border:4px solid var(--pink)}
       <span class="eyebrow">Orders open on WhatsApp</span>
       <h2>Join the colony.</h2>
       <p>We take orders on WhatsApp only and deliver in Bengaluru. Tap the button, send the message, and we'll dispatch your jar the next day. ₹330 per jar plus delivery.</p>
-      <a class="btn btn--main" data-wa href="#order" target="_blank" rel="noopener">Get the Jar<svg class="ico" fill="none"><use href="#i-wa"/></svg></a>
+      <div class="join__btns">
+        <a class="btn btn--main" data-wa href="#order" target="_blank" rel="noopener">Get the Jar<svg class="ico" fill="none"><use href="#i-wa"/></svg></a>
+        <a class="btn btn--ghost" href="https://instagram.com/mrearthlingco" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Follow on Instagram</a>
+      </div>
       <p class="join__note">Real humans (and one alien) reply.</p>
     </div>
   </section>
@@ -952,9 +944,6 @@ img.maker__photo{display:block;object-fit:cover;border:4px solid var(--pink)}
         <a href="https://instagram.com/mrearthlingco" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>@mrearthlingco</a>
         <span style="display:flex;align-items:center;gap:8px;opacity:.85"><svg class="ico" style="width:18px;height:18px"><use href="#i-pin"/></svg>Bengaluru, India</span>
         <button class="ftr__app" id="appBtn" type="button" hidden><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Install the app</button>
-        <button class="ftr__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Sound off. Turn on">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z" fill="currentColor"/><g class="wv"><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18 6.5a7.5 7.5 0 0 1 0 11"/></g><g class="mu"><path d="M16 9.5l5 5M21 9.5l-5 5"/></g></svg>
-        </button>
       </div>
     </div>
     <div class="ftr__base"><span>© 2026 Mr. Earthling Foods Pvt. Ltd.</span><span>Made on earth, mostly.</span></div>
@@ -1036,50 +1025,18 @@ img.maker__photo{display:block;object-fit:cover;border:4px solid var(--pink)}
   const xs=paths.map(p=>p.getBBox()),under=xs.reduce((a,b,i)=>b.width>xs[a].width?i:a,0);
   paths[under].classList.add('ul');
   paths.map((p,i)=>[p,xs[i].x]).filter(([p])=>!p.classList.contains('ul')).sort((a,b)=>a[1]-b[1]).forEach(([p],i)=>p.style.setProperty('--d',(i*.07)+'s'));
-  // hover/tap a letter: every time, it hops the same way and plays a piano note (sargam: Sa Re Ga Ma Pa Dha Ni Sa, rising left to right).
-  // Hit areas are static rectangles so the moving letters can't retrigger themselves. The full stop has none: no sound, no hop.
+  // hover/tap a letter: every time, it hops the same way. No sound.
+  // Hit areas are static rectangles so the moving letters can't retrigger themselves. The full stop has none: no hop.
   const letters=paths.filter(p=>!p.classList.contains('ul')).map(p=>({p,b:xs[paths.indexOf(p)]})).sort((a,b)=>a.b.x-b.b.x);
-  const NOTES=[261.63,293.66,329.63,349.23,392.00,440.00,493.88,523.25,587.33,659.25,698.46]; // Sa Re Ga Ma Pa Dha Ni Sa' Re' Ga' Ma' (shuddh swaras, Sa = C); the dot is silent
-  const btn=$('#soundBtn');
-  let pref=true;try{pref=localStorage.getItem('me-sound')!=='off'}catch(e){}
-  const savePref=()=>{try{localStorage.setItem('me-sound',pref?'on':'off')}catch(e){}};
-  // Browsers only allow sound after the visitor has clicked, tapped or pressed a key once on the page (hover alone doesn't count).
-  // So the audio engine is armed by the very first such gesture anywhere on the page, long before most people reach the footer.
-  let ac=null;
-  const arm=()=>{try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state!=='running')ac.resume().catch(()=>{});}catch(e){}};
-  const armEv=['pointerdown','mousedown','touchend','keydown','click'];
-  const disarm=()=>armEv.forEach(ev=>removeEventListener(ev,onGesture,true));
-  function onGesture(e){if(e.target&&e.target.closest&&e.target.closest('#soundBtn'))return;   // the speaker button handles its own click
-    arm();if(ac&&ac.state==='running'){sync();disarm()}else if(ac)ac.addEventListener('statechange',()=>{if(ac.state==='running'){sync();disarm()}},{once:true})}
-  armEv.forEach(ev=>addEventListener(ev,onGesture,{capture:true,passive:true}));
-  if(navigator.userActivation&&navigator.userActivation.hasBeenActive)arm();
-  const noSound=matchMedia('(max-width:860px),(hover:none)');                  // phones, tablets, touch screens: letters hop, no music
-  const soundReady=()=>!!(pref&&ac&&ac.state==='running'&&!noSound.matches);
-  // the speaker button shows the real state: on only when the visitor wants sound AND the browser has allowed it
-  function sync(){const on=soundReady();btn.setAttribute('aria-pressed',on);btn.setAttribute('aria-label',on?'Sound on. Mute':'Sound off. Turn on')}
-  btn.addEventListener('click',()=>{
-    if(soundReady()){pref=false;savePref();sync();return}
-    pref=true;savePref();arm();                       // this click is the permission the browser wants
-    (ac?ac.resume():Promise.reject()).then(()=>{sync();if(soundReady())piano(NOTES[0])}).catch(sync)});
-  sync();
-  const piano=f=>{const c=ac,t=c.currentTime,out=c.createGain(),lp=c.createBiquadFilter();
-    lp.type='lowpass';lp.frequency.setValueAtTime(Math.min(9000,f*9),t);lp.frequency.exponentialRampToValueAtTime(f*2.2,t+1.4);
-    out.gain.setValueAtTime(0.0001,t);out.gain.exponentialRampToValueAtTime(.34,t+.006);out.gain.exponentialRampToValueAtTime(.0001,t+2.1);
-    out.connect(lp);lp.connect(c.destination);
-    [[1,1],[2,.42],[3,.2],[4,.1],[5,.05]].forEach(([m,g],k)=>{[-3,3].forEach(det=>{const o=c.createOscillator(),og=c.createGain();
-      o.type='sine';o.frequency.value=f*m;o.detune.value=det*(k+1)*.5;og.gain.setValueAtTime(g/2,t);og.gain.exponentialRampToValueAtTime(.0001,t+(2.1/(m*.7+.3)));
-      o.connect(og);og.connect(out);o.start(t);o.stop(t+2.2);});});};
   const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
   const HOP=[{transform:'translateY(0) rotate(0deg)'},{transform:'translateY(-22%) rotate(-7deg)',offset:.4},{transform:'translateY(0) rotate(0deg)'}];
   const hits=document.createElementNS('http://www.w3.org/2000/svg','g');
   const dotIdx=letters.reduce((m,l,i)=>l.b.width<letters[m].b.width?i:m,0);   // the full stop is the narrowest glyph
-  let ni=0;
-  letters.forEach(({p,b},i)=>{if(i===dotIdx)return;const note=NOTES[ni++];const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+  letters.forEach(({p,b},i)=>{if(i===dotIdx)return;const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
     r.setAttribute('class','hit');r.setAttribute('x',b.x-1);r.setAttribute('width',b.width+2);r.setAttribute('y',-8);r.setAttribute('height',80);
     let hop=null,last=0;
     const play=()=>{if(!fl.classList.contains('live'))return;
       const now=performance.now();if(now-last<90)return;last=now;      // one tap fires both pointerenter and pointerdown; count it once
-      if(noSound.matches){}else if(soundReady())piano(note);else if(pref){btn.classList.remove('nudge');void btn.offsetWidth;btn.classList.add('nudge')}   // sound wanted but still blocked: point at the speaker button
       if(reduce)return;
       if(hop)hop.cancel();                                              // restart from rest so every hover looks identical
       hop=p.animate(HOP,{duration:520,easing:'cubic-bezier(.3,1.5,.5,1)'});};
